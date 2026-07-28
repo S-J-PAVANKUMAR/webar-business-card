@@ -1,18 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
-
     const websiteButton = document.querySelector("#website-button");
 
-    if (!websiteButton) {
-        console.log("Website button not found");
-        return;
-    }
+    console.log("Button found:", websiteButton);
 
     websiteButton.addEventListener("click", () => {
-
-        console.log("Website button clicked");
-
-        window.location.href = "https://www.google.com";
-
+        console.log("CLICK WORKED!");
     });
-
 });
