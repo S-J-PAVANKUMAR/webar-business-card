@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         console.log("Website button clicked");
 
-        window.open("https://www.google.com", "_blank");
+        window.location.href = "https://www.google.com";
 
     });
 
