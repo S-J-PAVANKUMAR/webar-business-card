@@ -42,6 +42,7 @@
 
       <a-plane
           id="website-button"
+          class="clickable"
           color="#1E88E5"
           width="0.8"
           height="0.22"
@@ -63,6 +64,18 @@
   </a-entity>
 
 </a-scene>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    const websiteBtn = document.querySelector("#website-button");
+
+    websiteBtn.addEventListener("click", () => {
+        window.open("https://www.google.com", "_blank");
+    });
+
+});
+</script>
 
 </body>
 </html>
