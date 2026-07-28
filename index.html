@@ -14,7 +14,6 @@
   <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
 
   <link rel="stylesheet" href="css/style.css">
-
 </head>
 
 <body>
@@ -26,36 +25,50 @@
   vr-mode-ui="enabled: false"
   device-orientation-permission-ui="enabled: true">
 
+  <!-- ================= ASSETS ================= -->
+
   <a-assets>
+
     <img id="logo" src="assets/images/logo.png">
 
     <a-asset-item
-        id="phoneModel"
-        src="assets/models/phone.glb">
+      id="phoneModel"
+      src="assets/models/phone.glb">
     </a-asset-item>
-    <a-gltf-model
-        id="table"
-        src="#tableModel"
-        position="0 -0.85 0"
-        rotation="0 0 0"
-        scale="0.5 0.5 0.5">
-    </a-gltf-model>
+
     <a-asset-item
-        id="tableModel"
-        src="assets/models/table.glb">
+      id="tableModel"
+      src="assets/models/table.glb">
     </a-asset-item>
+
   </a-assets>
 
-  <a-camera 
+  <!-- ================= CAMERA ================= -->
+
+  <a-camera
       position="0 0 0"
       look-controls="enabled: false"
       cursor="fuse: false; rayOrigin: mouse"
       raycaster="objects: .clickable">
   </a-camera>
 
+  <!-- ================= IMAGE TARGET ================= -->
+
   <a-entity mindar-image-target="targetIndex: 0">
 
     <a-entity id="ar-content">
+
+      <!-- TABLE -->
+
+      <a-gltf-model
+          id="table"
+          src="#tableModel"
+          position="0 -0.85 0"
+          rotation="0 0 0"
+          scale="0.5 0.5 0.5">
+      </a-gltf-model>
+
+      <!-- PHONE -->
 
       <a-gltf-model
           id="phone"
@@ -81,6 +94,8 @@
              easing: linear;">
       </a-gltf-model>
 
+      <!-- WEBSITE BUTTON -->
+
       <a-plane
           id="website-button"
           class="clickable"
@@ -91,28 +106,30 @@
           text="value: WEBSITE; align: center; color: white; width: 4">
       </a-plane>
 
+      <!-- LOGO -->
+
       <a-plane
-        id="company-logo"
-        src="#logo"
-        position="0 0.55 0"
-        width="0.6"
-        height="0.6"
-        transparent="true"
+          id="company-logo"
+          src="#logo"
+          position="0 0.55 0"
+          width="0.6"
+          height="0.6"
+          transparent="true"
 
-        animation__scale="
-        property: scale;
-        from: 0 0 0;
-        to: 1 1 1;
-        dur: 800;
-        easing: easeOutBack;"
+          animation__scale="
+            property: scale;
+            from: 0 0 0;
+            to: 1 1 1;
+            dur: 800;
+            easing: easeOutBack;"
 
-       animation__rotate="
-        property: rotation;
-        from: 0 0 0;
-        to: 0 360 0;
-        loop: true;
-        dur: 6000;
-        easing: linear;">
+          animation__rotate="
+            property: rotation;
+            from: 0 0 0;
+            to: 0 360 0;
+            loop: true;
+            dur: 6000;
+            easing: linear;">
       </a-plane>
 
     </a-entity>
