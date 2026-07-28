@@ -45,18 +45,29 @@
   <a-entity mindar-image-target="targetIndex: 0">
 
     <a-entity id="ar-content">
+
       <a-gltf-model
+          id="phone"
           src="#phoneModel"
           position="0 -0.55 0.02"
           rotation="0 0 0"
-          scale="20 20 20"
+          scale="0.5 0.5 0.5"
+
+          animation__float="
+             property: position;
+             from: 0 -0.55 0.02;
+             to: 0 -0.45 0.02;
+             dir: alternate;
+             loop: true;
+             dur: 1500;
+             easing: easeInOutSine;"
 
           animation__rotate="
              property: rotation;
              to: 0 360 0;
              loop: true;
-             dur: 6000;
-             easing: linear;"> 
+             dur: 8000;
+             easing: linear;">
       </a-gltf-model>
 
       <a-plane
