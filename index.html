@@ -47,9 +47,16 @@
     <a-entity id="ar-content">
       <a-gltf-model
           src="#phoneModel"
-          position="0 -0.35 0"
+          position="0 -0.55 0.02"
           rotation="0 0 0"
-          scale="0.2 0.2 0.2">
+          scale="1 1 1"
+
+          animation__rotate="
+             property: rotation;
+             to: 0 360 0;
+             loop: true;
+             dur: 6000;
+             easing: linear;"> 
       </a-gltf-model>
 
       <a-plane
