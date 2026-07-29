@@ -1,17 +1,24 @@
 const overlay = document.getElementById("overlay");
 const target = document.getElementById("target");
 
-// Hide overlay when page loads
+const websiteBtn = document.getElementById("websiteBtn");
+
+// Hide overlay initially
 overlay.style.display = "none";
 
 // Card detected
 target.addEventListener("targetFound", () => {
-    console.log("Business card detected");
+    console.log("Business Card Detected");
     overlay.style.display = "block";
 });
 
 // Card lost
 target.addEventListener("targetLost", () => {
-    console.log("Business card lost");
+    console.log("Business Card Lost");
     overlay.style.display = "none";
+});
+
+// Website Button
+websiteBtn.addEventListener("click", () => {
+    window.open("https://www.google.com", "_blank");
 });
