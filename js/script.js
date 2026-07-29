@@ -20,5 +20,6 @@ target.addEventListener("targetLost", () => {
 
 // Website Button
 websiteBtn.addEventListener("click", () => {
-    window.open("https://www.google.com", "_blank");
+    console.log("Website button clicked");
+    alert("Button clicked");
 });
