@@ -1,4 +1,28 @@
 body {
     margin: 0;
     overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+/* Overlay */
+#overlay {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+
+    z-index: 9999;
+
+    pointer-events: auto;
+}
+
+/* Buttons */
+.button-container {
+    display: flex;
+    gap: 10px;
+}
+
+.button-container button {
+    padding: 12px 18px;
+    font-size: 16px;
+    cursor: pointer;
 }

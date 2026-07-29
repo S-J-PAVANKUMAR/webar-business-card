@@ -20,6 +20,6 @@ target.addEventListener("targetLost", () => {
 
 // Website Button
 websiteBtn.addEventListener("click", () => {
-    console.log("Website button clicked");
     alert("Button clicked");
+    console.log("Website button clicked");
 });
