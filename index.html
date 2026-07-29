@@ -1,55 +1,60 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>MindAR Click Test</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebAR Business Card</title>
 
-  <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
+    <!-- A-Frame -->
+    <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+
+    <!-- MindAR -->
+    <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<a-scene
-  mindar-image="imageTargetSrc: assets/targets/targets.mind;"
-  color-space="sRGB"
-  renderer="colorManagement: true;"
-  vr-mode-ui="enabled: false"
-  device-orientation-permission-ui="enabled: false">
+    <!-- HTML Overlay -->
+    <div id="overlay" class="hidden">
 
-  <a-camera
-      position="0 0 0"
-      look-controls="enabled: false"
-      cursor="rayOrigin: mouse"
-      raycaster="objects: .clickable">
-  </a-camera>
+        <img src="assets/images/logo.png" alt="Logo" id="logo">
 
-  <a-entity mindar-image-target="targetIndex: 0">
+        <div class="button-container">
+            <button id="websiteBtn">🌐 Website</button>
+            <button id="callBtn">📞 Call</button>
+            <button id="portfolioBtn">📂 Portfolio</button>
+        </div>
 
-      <a-plane
-          id="blueButton"
-          class="clickable"
-          color="blue"
-          width="1"
-          height="0.5"
-          position="0 0 0">
-      </a-plane>
+    </div>
 
-  </a-entity>
+    <!-- AR Scene -->
+    <a-scene
+        mindar-image="imageTargetSrc: assets/targets/targets.mind;"
+        color-space="sRGB"
+        renderer="colorManagement: true;"
+        vr-mode-ui="enabled: false"
+        device-orientation-permission-ui="enabled: false"
+        embedded>
 
-</a-scene>
+        <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
 
-<script>
+        <a-entity id="target" mindar-image-target="targetIndex: 0">
 
-const button = document.querySelector("#blueButton");
+            <!-- Temporary logo inside AR -->
+            <a-image
+                src="assets/images/logo.png"
+                position="0 0.3 0"
+                width="0.6"
+                height="0.6">
+            </a-image>
 
-button.addEventListener("click", () => {
-    alert("Clicked!");
-    console.log("Clicked!");
-});
+        </a-entity>
 
-</script>
+    </a-scene>
+
+    <script src="script.js"></script>
 
 </body>
 </html>
