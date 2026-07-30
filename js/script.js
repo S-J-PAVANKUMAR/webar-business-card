@@ -2,6 +2,7 @@ const overlay = document.getElementById("overlay");
 const target = document.getElementById("target");
 
 const websiteBtn = document.getElementById("websiteBtn");
+const callBtn = document.getElementById("callBtn");
 
 // Hide overlay initially
 overlay.style.display = "none";
@@ -21,4 +22,9 @@ target.addEventListener("targetLost", () => {
 // Website Button
 websiteBtn.addEventListener("click", () => {
     window.open("https://www.google.com", "_blank");
+});
+
+// Call Button
+callBtn.addEventListener("click", () => {
+    window.location.href = "tel:+919876543210";
 });
