@@ -126,3 +126,19 @@ body {
     }
 
 }
+#overlay button{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+#overlay button i{
+    font-size:24px;
+    margin-bottom:8px;
+}
+
+#overlay button span{
+    font-size:14px;
+    font-weight:600;
+}
