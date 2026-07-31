@@ -45,8 +45,8 @@ body {
 /* Buttons */
 #overlay button {
 
-    width: 75px;
-    height: 75px;
+    width: 90px;
+    height: 85px;
 
     border: none;
     border-radius: 18px;
@@ -119,8 +119,8 @@ body {
 
     #overlay button{
 
-        width:70px;
-        height:70px;
+        width:80px;
+        height:80px;
         font-size:13px;
 
     }
