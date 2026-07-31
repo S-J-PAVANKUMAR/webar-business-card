@@ -17,15 +17,16 @@ body {
 /* Overlay */
 #overlay {
     position: fixed;
-    bottom: 30px;
+    bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 999;
 
     display: flex;
-    gap: 15px;
+    flex-direction: row;
+    gap: 16px;
 
-    padding: 15px 20px;
+    padding: 16px 20px;
 
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(18px);
@@ -43,26 +44,17 @@ body {
 }
 
 /* Buttons */
-#overlay button {
+#overlay button{
+    width:85px;
+    height:85px;
 
-    width: 90px;
-    height: 85px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
 
-    border: none;
-    border-radius: 18px;
-
-    cursor: pointer;
-
-    color: white;
-    font-size: 14px;
-    font-weight: 600;
-
-    transition:
-        transform .25s,
-        box-shadow .25s,
-        opacity .25s;
-
-    box-shadow: 0 8px 18px rgba(0,0,0,.25);
+    border:none;
+    border-radius:18px;
 }
 
 /* Website */
@@ -115,6 +107,8 @@ body {
         justify-content:space-evenly;
 
         padding:15px;
+
+        flex-direction:row;
     }
 
     #overlay button{
