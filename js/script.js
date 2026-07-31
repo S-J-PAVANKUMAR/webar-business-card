@@ -4,6 +4,7 @@ const target = document.getElementById("target");
 const websiteBtn = document.getElementById("websiteBtn");
 const callBtn = document.getElementById("callBtn");
 
+const portfolioBtn = document.getElementById("portfolioBtn");
 // Hide overlay initially
 overlay.style.display = "none";
 
@@ -27,4 +28,8 @@ websiteBtn.addEventListener("click", () => {
 // Call Button
 callBtn.addEventListener("click", () => {
     window.location.href = "tel:+919876543210";
+});
+
+portfolioBtn.addEventListener("click", () => {
+    window.location.href = "portfolio.html";
 });
